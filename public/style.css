@@ -162,7 +162,7 @@ input.cmn-toggle-round + label:after {
 }
 
 input.cmn-toggle-round:checked + label:before {
-  background-color: #919191;
+  background-color: #4a8bee;
 }
 
 input.cmn-toggle-round:checked + label:after {

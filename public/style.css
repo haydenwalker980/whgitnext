@@ -8,12 +8,11 @@ body {
 
 body {
   margin: 0;
+  background: linear-gradient(270deg, #48367d 0%, #241842 100%);
 }
 
 .wrapper {
   position: relative;
-  background: linear-gradient(270deg, #48367d 0%, #241842 100%);
-  height: 100%;
   padding: 80px 20px;
   display: flex;
   margin: auto;
@@ -25,18 +24,6 @@ body {
   color: #fff;
   overflow: hidden;
   transform: translateY(-58px);
-}
-
-@media all and (max-width: $screen-md-min) {
-  .wrapper {
-    width: 40%;
-  }
-}
-
-@media all and (max-width: $screen-sm-min) {
-  .wrapper {
-    display: none;
-  }
 }
 
 .bg {
@@ -58,6 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 40px;
 }
 
 h1 {

@@ -1,17 +1,55 @@
 * {
   font-family: "Open Sans", serif;
 }
-html, body {
+html,
+body {
   height: 100%;
 }
+
 body {
   margin: 0;
 }
 
 .wrapper {
+  position: relative;
+  background: linear-gradient(270deg, #48367d 0%, #241842 100%);
+  height: 100%;
   padding: 80px 20px;
-  flex-wrap: wrap;
+  display: flex;
   margin: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  transform: translateY(-58px);
+}
+
+@media all and (max-width: $screen-md-min) {
+  .wrapper {
+    width: 40%;
+  }
+}
+
+@media all and (max-width: $screen-sm-min) {
+  .wrapper {
+    display: none;
+  }
+}
+
+.bg {
+  position: absolute;
+  width: 25%;
+}
+
+.bg-left {
+  left: 0;
+}
+
+.bg-right {
+  right: 20px;
 }
 
 .container {
@@ -24,20 +62,34 @@ body {
 
 h1 {
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 2.2em;
   color: #2e2e2e;
   text-align: center;
 }
 
-a {
- color: #6e49cb;
+.container a {
+  color: #2e2e2e;
 }
 
 .settings {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 40px;
+}
+
+.white-box {
+  padding: 60px 80px;
+  background: #fff;
+  width: 70%;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 900px) {
+  .white-box {
+    width: 700px;
+  }
 }
 
 .settings .text-switch {
@@ -54,8 +106,21 @@ a {
   margin: 0px 20px;
 }
 
+.footer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+}
+
 /* ============================================================
-  COMMON
+  TOGGLE
 ============================================================ */
 .cmn-toggle {
   position: absolute;
@@ -67,28 +132,22 @@ a {
   position: relative;
   cursor: pointer;
   outline: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 /* ============================================================
-  SWITCH 1 - ROUND
+  SWITC
 ============================================================ */
 input.cmn-toggle-round + label {
   padding: 2px;
-  width: 120px;
-  height: 60px;
+  width: 140px;
+  height: 52px;
   background-color: #dddddd;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
   border-radius: 60px;
 }
 
-input.cmn-toggle-round + label:before, input.cmn-toggle-round + label:after {
+input.cmn-toggle-round + label:before,
+input.cmn-toggle-round + label:after {
   display: block;
   position: absolute;
   top: 1px;
@@ -99,40 +158,25 @@ input.cmn-toggle-round + label:before, input.cmn-toggle-round + label:after {
 
 input.cmn-toggle-round + label:before {
   right: 1px;
-  background-color: #f1f1f1;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
+  background-color: #919191;
   border-radius: 60px;
-  -webkit-transition: background 0.4s;
-  -moz-transition: background 0.4s;
-  -o-transition: background 0.4s;
   transition: background 0.4s;
 }
 
 input.cmn-toggle-round + label:after {
-  width: 58px;
+  width: 48px;
+  height: 48px;
   background-color: #fff;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
+  margin-top: 3px;
   border-radius: 100%;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  -webkit-transition: margin 0.4s;
-  -moz-transition: margin 0.4s;
-  -o-transition: margin 0.4s;
   transition: margin 0.4s;
+  left: 3px;
 }
 
 input.cmn-toggle-round:checked + label:before {
-  background-color: #fca121;
+  background-color: #919191;
 }
 
 input.cmn-toggle-round:checked + label:after {
-  margin-left: 64px;
+  margin-left: 90px;
 }
-

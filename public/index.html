@@ -13,28 +13,42 @@
   </head>
   <body>
     <section class="wrapper">
-      <div class="container">
-        <h1>
-          Which version of <a href="https://gitlab.com">GitLab</a> are you
-          using?
-        </h1>
+      <img src="./images/hero-bg-left.svg" class="bg bg-left"/>
+      <img src="./images/hero-bg-right.svg" class="bg bg-right"/>
 
-        <div class="settings">
-          <div class="text-switch">
-            Current
-          </div>
-          <div class="switch">
-            <input
-              id="next-switch"
-              class="cmn-toggle cmn-toggle-round"
-              type="checkbox"
-            />
-            <label for="next-switch"></label>
-          </div>
-          <div class="text-switch">
-            Next
+      <div class="container">
+        <div class="white-box">
+          <h1>
+            Select which version of <a href="https://gitlab.com">GitLab.com</a> you
+            want to use
+          </h1>
+
+          <div class="settings">
+            <div class="text-switch">
+              Current
+            </div>
+            <div class="switch">
+              <input
+                id="next-switch"
+                class="cmn-toggle cmn-toggle-round"
+                type="checkbox"
+              />
+              <label for="next-switch"></label>
+            </div>
+            <div class="text-switch">
+              Next
+            </div>
           </div>
         </div>
+      </div>
+      <div class="footer">
+        <p>
+          This page allows users toggle whether they will be directed to the
+          Canary infrastructure.
+        </p>
+        <a href="https://gitlab.com/gitlab-com/gl-infra/next.gitlab.com"
+          >See this project on GitLab</a
+        >
       </div>
     </section>
     <script src="index.js"></script>

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
  *
  * @param String faviconPath
  */
-function setFavicon(faviconPath) {
+const setFavicon = faviconPath => {
   const faviconEl = document.getElementById("favicon");
   if (faviconEl && faviconPath) {
     faviconEl.setAttribute("href", faviconPath);

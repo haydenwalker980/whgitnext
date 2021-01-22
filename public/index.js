@@ -4,11 +4,11 @@ const DEFAULT_FAVICON = "favicon.default.png";
 document.addEventListener("DOMContentLoaded", () => {
   // Fetch the cookie value
   if (document.cookie.indexOf("gitlab_canary=true") >= 0) {
-    document.querySelector("#next-switch").setAttribute("checked", true);
+    document.getElementById("next-switch").setAttribute("checked", true);
     setFavicon(NEXT_FAVICON);
   }
 
-  document.querySelector("#next-switch").addEventListener("change", () => {
+  document.getElementById("next-switch").addEventListener("change", () => {
     document.cookie = `gitlab_canary=${this.checked};domain=.gitlab.com;path=/;expires=${new Date(Date.now() + 31536000000).toUTCString()}`;
     const favicon = this.checked ? NEXT_FAVICON : DEFAULT_FAVICON;
     setFavicon(favicon);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * @param String faviconPath
  */
 function setFavicon(faviconPath) {
-  const faviconEl = document.querySelector("#favicon");
+  const faviconEl = document.getElementById("favicon");
   if (faviconEl && faviconPath) {
     faviconEl.setAttribute("href", faviconPath);
   }

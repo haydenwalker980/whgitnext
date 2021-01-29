@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setFavicon(NEXT_FAVICON);
   }
 
-  document.getElementById("next-switch").addEventListener("change", () => {
-    document.cookie = `gitlab_canary=${this.checked};domain=.gitlab.com;path=/;expires=${new Date(Date.now() + 31536000000).toUTCString()}`;
-    const favicon = this.checked ? NEXT_FAVICON : DEFAULT_FAVICON;
+  document.getElementById("next-switch").addEventListener("change", (e) => {
+    document.cookie = `gitlab_canary=${e.currentTarget.checked};domain=.gitlab.com;path=/;expires=${new Date(Date.now() + 31536000000).toUTCString()}`;
+    const favicon = e.currentTarget.checked ? NEXT_FAVICON : DEFAULT_FAVICON;
     setFavicon(favicon);
   });
 });

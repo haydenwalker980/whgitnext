@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.getElementById("next-switch").addEventListener("change", (e) => {
-    document.cookie = `gitlab_canary=${e.currentTarget.checked};domain=.gitlab.com;path=/;expires=${new Date(Date.now() + 31536000000).toUTCString()}`;
+    document.cookie = `gitlab_canary=${e.currentTarget.checked};domain=.git.winhost.gq;path=/;expires=${new Date(Date.now() + 31536000000).toUTCString()}`;
     const favicon = e.currentTarget.checked ? NEXT_FAVICON : DEFAULT_FAVICON;
     setFavicon(favicon);
   });
